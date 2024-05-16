@@ -7,7 +7,24 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('LimMap'),
+        ),
+        body: Row(
+          children: [
+            ElevatedButton(
+              onPressed: () {
+
+              },
+              child: const Text('Test'),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
