@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -11,17 +12,21 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('LimMap'),
+          title: const Text('LimMap',
+          style: TextStyle(
+            fontSize: 25,
+            fontFamily: 'Karla'
+          ),),
         ),
-        body: Row(
-          children: [
-            ElevatedButton(
-              onPressed: () {
-
-              },
-              child: const Text('Test'),
-            ),
-          ],
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SvgPicture.asset(
+              "assets/img/logoText.svg",
+          )
+            ],
+          ),
         ),
       ),
     );
