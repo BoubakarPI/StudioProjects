@@ -12,19 +12,21 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('LimMap',
-          style: TextStyle(
-            fontSize: 25,
-            fontFamily: 'Karla'
-          ),),
+          backgroundColor: Colors.white,
+          title: SvgPicture.asset("assets/img/logoText.svg",
+          height: 45,),
         ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset(
-              "assets/img/logoText.svg",
-          )
+              SvgPicture.asset("assets/img/logo.svg",
+              height: 75),
+              const Text("Me voici",
+              style: TextStyle(
+                color: Colors.red,
+                fontSize: 35
+              ),)
             ],
           ),
         ),
@@ -32,4 +34,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
